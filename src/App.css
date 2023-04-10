@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  border: none;
+  background-color: #ffc75d;
+  padding: .75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  /* border: 1px solid black; */
+}
+
+nav>a {
+  margin: .5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* border: 1px solid black; */
+}
+
+.logo img {
+  width: 100px;
+  margin: 0;
+}
+
+.hero-section {
+  background-image: url('../src/images/music_lesson2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 837px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-section h3 {
+  margin: 0;
+  font-size: 4rem;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-section p {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
+
+.get-started {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.get-started span {
+  color: black;
+}
+
+/* .hero-section>img {
+  height: 750px;
+} */
