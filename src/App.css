@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Poppins:wght@400;500;700&display=swap');
 
 :root {
   --base-font: 'Poppins', sans-serif;
+  --logo-font: 'Aladin', cursive;
+
+  --beige-brown: #d89242;
+  --light-yellow: #ffc75d;
+  --lighter-blue: #48A398;
+  --green-grey: #393A31;
+  --blue-grey: #27282C;
+  --lighter-grey: #979797;
+  --off-white: #dee9ee;
+
 }
 
 body {
@@ -10,19 +20,19 @@ body {
   font-family: var(--base-font);
 }
 
-.btn {
-  border: none;
-  background-color: #ffc75d;
-  padding: .75rem 1.5rem;
-  border-radius: 2rem;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all .05s;
+.background {
+  height: 250px;
+  width: 100%;
+  background-color: var(--blue-grey);
+  position: absolute;
+  z-index: -1;
+  transform: rotate(180deg);
 }
 
-.btn:hover {
-  background-color: white;
-  border: 2px solid #ffc75d;
+svg {
+  position: absolute;
+  bottom: 100%;
+  /* transform: rotate(180deg); */
 }
 
 header {
@@ -30,9 +40,121 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-inline: 2rem;
-  box-shadow: 0px -1px 5px black;
+  z-index: 10;
+}
+
+header img {
+  height: 100px;
+  padding: 0;
+}
+
+.logo {
+  font-family: var(--logo-font);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  background: -webkit-linear-gradient(var(--beige-brown), var(--light-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: .5rem 0 0;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.contact-btns {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  margin-inline: 2rem;
+  color: white;
+  font-family: var(--base-font);
+}
+
+.form {
+  border-top: 4px solid var(--lighter-blue);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  float: right;
+  /* margin-right: 5rem; */
+  background-color: white;
+  position: relative;
+  top: -6rem;
+  right: 15rem;
+  box-shadow: 0 15px 20px -10px var(--lighter-grey);
+}
+
+.form h3 {
+  text-align: center;
+}
+
+input,
+select {
+  margin-block: .5rem;
+  padding: .5rem;
+  font-size: .875rem;
+  border-radius: .375rem;
+  border: 1px solid var(--off-white);
+  font-weight: 500;
+}
+
+.btn {
+  border: 1px solid var(--light-yellow);
+  background-color: var(--light-yellow);
+  padding: .75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: .75rem;
+  transition: all .15s;
+  width: max-content;
+  align-self: center;
 
 }
+
+.btn:hover {
+  transform: scale(.95);
+  background-color: white;
+  /* border: 2px solid var(--lighter-blue); */
+}
+
+.form .btn {
+  margin-block: .5rem;
+}
+
+.hero-section {
+  /* border: 1px solid black; */
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+}
+
+.hero-section span {
+  color: var(--lighter-blue);
+}
+
+/* Old CSS designs */
+
+/* 
+
+
 
 nav {
   margin-left: 5rem;
@@ -69,8 +191,6 @@ nav>a:hover::after {
 .logo {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  /* border: 1px solid black; */
 }
 
 .logo img {
@@ -110,7 +230,7 @@ nav>a:hover::after {
 
 .get-started span {
   color: black;
-}
+} */
 
 /* .hero-section>img {
   height: 750px;
